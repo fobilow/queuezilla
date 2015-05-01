@@ -19,7 +19,7 @@ interface IQueueConsumer
 
   public function doJob($job);
 
-  public function completeJob();
+  public function completeJob($job);
 
   public function takeABreak();
 }
