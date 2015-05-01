@@ -7,6 +7,13 @@ namespace QueueZilla\Framework\Queue;
 
 abstract class QueueConsumer implements IQueueConsumer
 {
+  /**
+   * Identifier string for process. This is used for locking jobs from a queue
+   *
+   * @var string $_processId
+   */
+  protected $_processId;
+
   public function consume()
   {
     while(true)
@@ -26,6 +33,15 @@ abstract class QueueConsumer implements IQueueConsumer
     }
   }
 
+  public function setProcessId($id)
+  {
+    $this->_processId = $id;
+  }
+
+  protected function _getProcessId()
+  {
+    return $this->_processId;
+  }
 
   public function takeABreak()
   {
