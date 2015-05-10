@@ -1,7 +1,7 @@
 QueueZilla
 =======
 QueueZilla is a simple framework that enables you to write MySQL queue consumers quickly and neatly. It enforces key methods via an interface
-so you can right clean code
+so you can write clean code
 
 ### Installation
 Run `composer require fobilow/queuezilla 1.*` or add `"fobilow/queuezilla" :"1.*"` to your `composer.json`.
